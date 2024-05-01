@@ -1,112 +1,110 @@
 @import "../../responsive.scss";
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+
+  a {
+    transition: all 0.5s ease;
+
+    @include sm{
+        display: none;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  .left {
+    flex: 3;
     display: flex;
-    justify-content: space-between;
-    height: 100px;
     align-items: center;
+    gap: 15px;
+    // background-color: red;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      img {
+        width: 28px;
+      }
+      span {
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex: 2;
+    background-color: yellow;
+    height: 100%;
+
+    @include md {
+      background-color: transparent;
+    }
 
     a {
-        transition: all 0.5s ease;
-
-        &:hover {
-            scale: 1.1;
-        }
+      padding: 12px 24px;
+      margin: 20px;
     }
 
+    .register {
+      background-color: green;
+    }
 
-    .left{
-        flex: 3;
-        display: flex;
-        align-items: center;
-        gap: 15px;
+    .menuIcon {
+      display: none;
+      z-index: 999;
 
-        background-color: red;
-        .logo{
-            font-weight: bold;
-            font-size: 20px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            img{
-                width: 28px;
-            }
-            span, a{
-                @include md{
-                    display: none;
-                }
+      img {
+        width: 36px;
+        cursor: pointer;
+      }
 
-                @include sm{
-                    display: none;
-                }
-            }
-            a{
-                @include md{
-                    display: none;
-                }
+      @include sm {
+        display: inline;
+      }
+    }
 
-                @include sm{
-                    display: none;
-                }
-            }
+    .menu {
+      position: absolute;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      top: 0;
+      right: -50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
 
-        }
-    };
-    .right{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 15px;
-        flex: 2;
-        background-color: yellow;
-        height: 100%;
-        
-        @include md{
-            background-color: transparent;
-        }
+      &.active {
+        right: 0;
+      }
 
+      @include sm {
         a {
-            padding: 12px 24px;
-            margin: 20px;
+          display: initial;
         }
-
-        .register{
-            background-color: green;
-        }
-
-        .menuIcon{
-            display: none;
-            z-index: 999;
-
-            img{
-                width: 36px;
-                cursor: pointer;
-            }
-
-            @include sm{
-                display: inline;
-            }
-        }
-
-        .menu{
-            position: absolute;
-            background-color: black;
-            color: white;
-            height: 100vh;
-            width: 50%;
-            top: 0;
-            right: -50%;
-            transition: all 1s ease;
-
-            &.active{
-                right: 0;
-            }
-
-            @include sm{
-                a {
-                    display: initial;
-                }
-            }
-        }
+      }
     }
+  }
 }

@@ -11,10 +11,10 @@ export default function Navbar() {
             <img src="/logo.png" alt="" />
             <span>Agency</span>
           </a>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contacts</a>
-          <a href="">Others</a>
+          <a href="/">Home</a>
+          <a href="/">About</a>
+          <a href="/">Contacts</a>
+          <a href="/">Others</a>
         </div>
         <div className="right">
           <a href="">Sign In</a>

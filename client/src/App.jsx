@@ -1,3 +1,4 @@
+import HomePage from "./routes/HomePage/homepage"
 import Navbar from "./components/navbar/Navbar"
 
 
@@ -7,7 +8,13 @@ function App() {
 
   return (
     <div className='layout'>
-      <Navbar />
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="content">
+        <HomePage />
+      </div>
+      
     </div>
   )
 }

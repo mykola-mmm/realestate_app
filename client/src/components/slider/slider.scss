@@ -1,5 +1,5 @@
 .slider {
-
+    
     .fullslider {
         position: absolute;
         width: 100vw;
@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // transition: all 0.5s ease-in-out;
+        z-index: 100000;
         .arrow {
             flex: 1;
             display: flex;

@@ -3,6 +3,7 @@ import Slider from "../../components/slider/slider";
 import { singlePostData, userData } from "../../lib/dummydata";
 import "./singlepage.scss";
 import Map from "../../components/map/map";
+import 'leaflet/dist/leaflet.css';
 
 export default function SinglePage() {
   return (

@@ -1,8 +1,9 @@
 import React from 'react'
-import { listData } from '../../../../lib/dummydata'
+import { listData } from '../../lib/dummydata'
 import "./listpage.scss"
 import Filter from "../../components/filter/filter"
 import Card from "../../components/card/card"
+import Map from "../../components/map/map"
 
 export default function ListPage() {
 
@@ -20,7 +21,9 @@ export default function ListPage() {
           }
         </div>
       </div>
-      <div className="mapContainer">Map</div>
+      <div className="mapContainer">
+        <Map items={data}/>
+      </div>
     </div>
   )
 }

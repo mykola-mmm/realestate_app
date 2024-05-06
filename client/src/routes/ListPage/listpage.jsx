@@ -18,9 +18,6 @@ export default function ListPage() {
               <Card key={item.id} item={item} />
             ))
           }
-          <div className="tst">
-            some text
-          </div>
         </div>
       </div>
       <div className="mapContainer">Map</div>

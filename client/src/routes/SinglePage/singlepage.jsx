@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "../../components/slider/slider";
 import { singlePostData, userData } from "../../lib/dummydata";
 import "./singlepage.scss";
+import Map from "../../components/map/map";
 
 export default function SinglePage() {
   return (
@@ -17,7 +18,7 @@ export default function SinglePage() {
                   <img src="/pin.png" alt="" />
                   <span>{singlePostData.address}</span>
                 </div>
-                <div className="price">{singlePostData.price}</div>
+                <div className="price">$ {singlePostData.price}</div>
               </div>
 
               <div className="user">
@@ -25,15 +26,92 @@ export default function SinglePage() {
                 <span>{userData.name}</span>
               </div>
             </div>
-            <div className="bottom">
-              {singlePostData.description}
-            </div>
+            <div className="bottom">{singlePostData.description}</div>
           </div>
         </div>
       </div>
 
       <div className="features">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          <p className="title">General</p>
+          <div className="listVertical">
+            <div className="feature">
+              <img src="./utility.png" alt="" />
+              <div className="featureText">
+                <span>Utilities</span>
+                <p>Renter is responsible</p>
+              </div>
+            </div>
+            <div className="feature">
+              <img src="./pet.png" alt="" />
+              <div className="featureText">
+                <span>Pet Policy</span>
+                <p>Pets allowed</p>
+              </div>
+            </div>
+            <div className="feature">
+              <img src="./fee.png" alt="" />
+              <div className="featureText">
+                <span>Property Fees</span>
+                <p>Negotiable</p>
+              </div>
+            </div>
+          </div>
+          <p className="title">Sizes</p>
+          <div className="sizes">
+            <div className="size">
+              <img src="./size.png" alt="" />
+              <span>80sqm</span>
+            </div>
+            <div className="size">
+              <img src="./bed.png" alt="" />
+              <span>2 beds</span>
+            </div>
+            <div className="size">
+              <img src="./bath.png" alt="" />
+              <span>1 bathroom</span>
+            </div>
+          </div>
+
+          <p className="title">Nearby places</p>
+          <div className="listHorizontal">
+            <div className="feature">
+              <img src="./school.png" alt="" />
+              <div className="featureText">
+                <span>School</span>
+                <p>2km away</p>
+              </div>
+            </div>
+            <div className="feature">
+              <img src="./restaurant.png" alt="" />
+              <div className="featureText">
+                <span>Restaurant</span>
+                <p>100m away</p>
+              </div>
+            </div>
+            <div className="feature">
+              <img src="./bus.png" alt="" />
+              <div className="featureText">
+                <span>Bus Stop</span>
+                <p>400m away</p>
+              </div>
+            </div>
+          </div>
+          <p className="title">Location</p>
+          <div className="mapContainer">
+            <Map items={[singlePostData]} />
+          </div>
+          <div className="buttons">
+            <button>
+              <img src="./chat.png" alt="" />
+              Send a message
+            </button>
+            <button>
+              <img src="./save.png" alt="" />
+              Save the place
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

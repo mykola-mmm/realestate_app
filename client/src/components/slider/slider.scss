@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .slider {
     
     .fullslider {
@@ -17,12 +19,26 @@
             align-items: center;
             justify-content: center;
 
+            @include md {
+
+            }
+
             img {
                 width: 50px;
 
+                @include md {
+                    width: 30px;
+                }
+
+                
+                @include sm {
+                    width: 15px;
+                }
                 &.right {
                     transform: rotate(180deg);
                 }
+
+                
             }
         }
 

@@ -4,8 +4,9 @@ import {
 } from "react-router-dom";
 import Layout from "./layout/layout";
 import ListPage from "./routes/ListPage/listpage";
-import HomePage from "./routes/HomePage/homepage"
-import SinglePage from "./routes/SinglePage/singlepage"
+import HomePage from "./routes/HomePage/homepage";
+import SinglePage from "./routes/SinglePage/singlepage";
+import ProfilePage from "./routes/ProfilePage/profilepage";
 
 import "./layout/layout.scss"
 
@@ -28,6 +29,10 @@ function App() {
         {
           path: ":id",
           element: <SinglePage />
+        },
+        {
+          path: "/profile",
+          element: <ProfilePage />
         }
       ]
     }
